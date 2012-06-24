@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<registry>
+  <record name="collective.behavior.vat.VAT">
+    <field type="plone.registry.field.List">
+      <title>VAT</title>
+      <description>A list of VAT in %.</description>
+      <value_type type="plone.registry.field.Float" />
+    </field>
+  </record>
+</registry>
