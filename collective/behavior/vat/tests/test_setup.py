@@ -16,9 +16,7 @@ class TestSetup(IntegrationTestCase):
         setup = getToolByName(self.portal, 'portal_setup')
         self.assertEqual(
             setup.getVersionForProfile(
-                'profile-collective.behavior.vat:default'),
-            u'0'
-        )
+                'profile-collective.behavior.vat:default'), u'0')
 
     def get_record_VAT(self):
         from zope.component import getUtility
@@ -55,7 +53,5 @@ class TestSetup(IntegrationTestCase):
         from zope.component import getUtility
         from plone.registry.interfaces import IRegistry
         registry = getUtility(IRegistry)
-        self.assertRaises(
-            KeyError,
-            lambda: registry['collective.behavior.vat.VAT']
-        )
+        with self.assertRaises(KeyError):
+            registry['collective.behavior.vat.VAT']
