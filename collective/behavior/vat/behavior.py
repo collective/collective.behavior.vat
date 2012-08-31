@@ -1,14 +1,8 @@
 from collective.behavior.vat.interfaces import IVAT
 from decimal import Decimal
 from plone.directives import form
-from rwproperty import getproperty
-from rwproperty import setproperty
 from zope.interface import alsoProvides
 from zope.interface import implements
-
-import logging
-
-logger = logging.getLogger(__name__)
 
 
 alsoProvides(IVAT, form.IFormFieldProvider)
@@ -22,11 +16,11 @@ class VAT(object):
     def __init__(self, context):
         self.context = context
 
-    @getproperty
+    @property
     def vat(self):
         return getattr(self.context, 'vat', None)
 
-    @setproperty
+    @vat.setter
     def vat(self, value):
         """Setting vat as Decimal.
 
