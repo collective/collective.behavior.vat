@@ -1,12 +1,20 @@
 from setuptools import find_packages
 from setuptools import setup
 
+import os
+
+
+long_description = (
+    open(os.path.join("collective", "behavior", "vat", "docs", "README.rst")).read() + "\n" +
+    open(os.path.join("collective", "behavior", "vat", "docs", "HISTORY.rst")).read() + "\n" +
+    open(os.path.join("collective", "behavior", "vat", "docs", "CONTRIBUTORS.rst")).read())
+
 
 setup(
     name='collective.behavior.vat',
     version='0.0',
-    description="Behavior to add VAT field to content.",
-    long_description=open("README.rst").read(),
+    description="Adds VAT field to dexterity content type.",
+    long_description=long_description,
     # Get more strings from
     # http://pypi.python.org/pypi?:action=list_classifiers
     classifiers=[
@@ -30,7 +38,6 @@ setup(
         'hexagonit.testing',
         'plone.behavior',
         'plone.directives.form',
-        'rwproperty',
         'setuptools'],
     entry_points="""
     # -*- Entry points: -*-
