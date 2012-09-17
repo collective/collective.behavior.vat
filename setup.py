@@ -34,6 +34,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'Plone>=4.2',
         'five.grok',
         'hexagonit.testing',
         'plone.behavior',
