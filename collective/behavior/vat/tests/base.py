@@ -18,11 +18,14 @@ class BehaviorVatLayer(PloneSandboxLayer):
         import collective.behavior.vat
         self.loadZCML(package=collective.behavior.vat)
         z2.installProduct(app, 'collective.behavior.vat')
+        import collective.behavior.vat.tests.dexterity
+        self.loadZCML(package=collective.behavior.vat.tests.dexterity)
 
     def setUpPloneSite(self, portal):
         """Set up Plone."""
         # Install into Plone site using portal_setup
         self.applyProfile(portal, 'collective.behavior.vat:default')
+        self.applyProfile(portal, 'collective.behavior.vat.tests.dexterity:default')
 
     def tearDownZope(self, app):
         """Tear down Zope."""
