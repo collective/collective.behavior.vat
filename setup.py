@@ -12,7 +12,7 @@ long_description = (
 
 setup(
     name='collective.behavior.vat',
-    version='0.2',
+    version='0.3',
     description="Adds VAT field to dexterity content type.",
     long_description=long_description,
     # Get more strings from
