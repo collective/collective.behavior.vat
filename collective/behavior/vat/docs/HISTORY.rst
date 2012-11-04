@@ -1,10 +1,11 @@
 Changelog
 ---------
 
-0.3 (2012-10-XX)
+0.3 (2012-11-04)
 ================
 
 - Added test for acquisition. [taito]
+- Testes with Plone-4.2.2. [taito]
 
 0.2 (2012-09-17)
 ================
