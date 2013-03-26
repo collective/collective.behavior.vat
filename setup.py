@@ -35,6 +35,7 @@ setup(
     install_requires=[
         'five.grok',
         'hexagonit.testing',
+        'plone.app.dexterity',
         'plone.behavior',
         'plone.directives.form',
         'setuptools'],
