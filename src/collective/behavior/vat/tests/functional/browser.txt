@@ -1,0 +1,21 @@
+Log in as Manager::
+
+    >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
+
+Add Test Folder::
+
+    >>> browser.open('/++add++TestFolder')
+    >>> browser.getControl(name="form.widgets.IDublinCore.title").value = 'Folder1'
+    >>> browser.getControl(name="form.buttons.save").click()
+    >>> print browser.bycss('#form-widgets-IVAT-rate')
+    --- 1 ---
+    <span id="form-widgets-IVAT-rate" class="select-widget required choice-field"><span class="selected-option">24%</span></span>
+
+Add Test Folder to Folder1::
+
+    >>> browser.open('/folder1/++add++TestFolder')
+    >>> browser.getControl(name="form.widgets.IDublinCore.title").value = 'Folder2'
+    >>> browser.getControl(name="form.buttons.save").click()
+    >>> print browser.bycss('#form-widgets-IVAT-rate')
+    --- 1 ---
+    <span id="form-widgets-IVAT-rate" class="select-widget required choice-field"><span class="selected-option">24%</span></span>
