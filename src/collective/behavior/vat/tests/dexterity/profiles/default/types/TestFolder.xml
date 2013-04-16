@@ -18,7 +18,7 @@
   </property>
 
   <!-- Schema, class and security -->
-  <property name="schema">collective.behavior.vat.tests.dexterity.folder.ITestFolder</property>
+  <property name="schema">collective.behavior.vat.tests.dexterity.folder.ITestFolderSchema</property>
   <property name="klass">plone.dexterity.content.Container</property>
   <property name="add_permission">collective.behavior.vat.AddFolder</property>
 

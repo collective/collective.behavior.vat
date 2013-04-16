@@ -7,7 +7,6 @@ import os
 long_description = (
     open(os.path.join("README.rst")).read() + "\n" +
     open(os.path.join("src", "collective", "behavior", "vat", "docs", "HISTORY.rst")).read() + "\n" +
-    open(os.path.join("src", "collective", "behavior", "vat", "docs", "INSTALL.rst")).read() + "\n" +
     open(os.path.join("src", "collective", "behavior", "vat", "docs", "CREDITS.rst")).read())
 
 
@@ -18,7 +17,7 @@ setup(
     long_description=long_description,
     classifiers=[
         "Framework :: Plone",
-        "Framework :: Plone :: 4.2",
+        "Framework :: Plone :: 4.3",
         "License :: OSI Approved :: BSD License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7"],
@@ -33,12 +32,9 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'five.grok',
-        'hexagonit.testing',
-        'plone.app.dexterity',
         'plone.behavior',
-        'plone.directives.form',
         'setuptools'],
+    extras_require={'test': ['hexagonit.testing', 'plone.app.dexterity']},
     entry_points="""
     # -*- Entry points: -*-
 

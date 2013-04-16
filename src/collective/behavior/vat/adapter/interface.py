@@ -1,13 +1,15 @@
 from collective.behavior.vat.interfaces import IAdapter
 from decimal import Decimal
-from five import grok
-from zope.interface import Interface
+from zope.interface import implements
 
 
-class Adapter(grok.Adapter):
+class Adapter(object):
     """Adapter for handling VAT rate"""
-    grok.context(Interface)
-    grok.provides(IAdapter)
+
+    implements(IAdapter)
+
+    def __init__(self, context):
+        self.context = context
 
     def percent(self, rate):
         """Returns localized vat rate with percent

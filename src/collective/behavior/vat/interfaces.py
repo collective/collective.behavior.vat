@@ -1,13 +1,13 @@
 from collective.behavior.vat import _
-from plone.directives import form
+from plone.supermodel.model import Schema
 from zope.interface import Interface
-from zope.schema import Choice
+from zope import schema
 
 
-class IVAT(form.Schema):
+class IVAT(Schema):
     """Interface for VAT behavior."""
 
-    rate = Choice(
+    rate = schema.Choice(
         title=_(u'VAT rate'),
         vocabulary=u'collective.behavior.vat.rates')
 

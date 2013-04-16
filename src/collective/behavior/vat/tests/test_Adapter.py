@@ -10,15 +10,7 @@ class AdapterTestCase(IntegrationTestCase):
         self.portal = self.layer['portal']
 
     def test_subclass(self):
-        from five.grok import Adapter as BaseAdapter
-        self.assertTrue(issubclass(Adapter, BaseAdapter))
-
-    def test_context(self):
-        from zope.interface import Interface
-        self.assertEqual(getattr(Adapter, 'grokcore.component.directive.context'), Interface)
-
-    def test_provides(self):
-        self.assertEqual(getattr(Adapter, 'grokcore.component.directive.provides'), IAdapter)
+        self.assertTrue(issubclass(Adapter, object))
 
     def test_percent(self):
         adapter = IAdapter(self.portal)

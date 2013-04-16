@@ -1,13 +1,14 @@
 from collective.behavior.vat.interfaces import IAdapter
-from five import grok
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
+from zope.interface import implements
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleVocabulary
 
 
 class VATRatesVocabulary(object):
-    grok.implements(IVocabularyFactory)
+
+    implements(IVocabularyFactory)
 
     def __call__(self, context):
         registry = getUtility(IRegistry)
@@ -24,4 +25,4 @@ class VATRatesVocabulary(object):
         return SimpleVocabulary(terms)
 
 
-grok.global_utility(VATRatesVocabulary, name=u"collective.behavior.vat.rates")
+VATRatesVocabularyFactory = VATRatesVocabulary()
