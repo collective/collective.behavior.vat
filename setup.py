@@ -12,7 +12,7 @@ long_description = (
 
 setup(
     name='collective.behavior.vat',
-    version='0.4.0.1',
+    version='0.4.0.2',
     description="Adds VAT field to dexterity content type.",
     long_description=long_description,
     classifiers=[
