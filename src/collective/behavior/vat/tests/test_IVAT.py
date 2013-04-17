@@ -7,8 +7,8 @@ class TestIVAT(unittest.TestCase):
     """TestCase for IVAT"""
 
     def test_subclass(self):
-        from plone.directives import form
-        self.assertTrue(issubclass(IVAT, form.Schema))
+        from collective.behavior.vat.schema import VATSchema
+        self.assertTrue(issubclass(IVAT, VATSchema))
 
     def get_schema(self, name):
         """Get schema by name.
