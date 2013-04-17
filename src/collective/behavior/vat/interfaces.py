@@ -1,15 +1,9 @@
-from collective.behavior.vat import _
-from plone.supermodel.model import Schema
+from collective.behavior.vat.schema import VATSchema
 from zope.interface import Interface
-from zope import schema
 
 
-class IVAT(Schema):
-    """Interface for VAT behavior."""
-
-    rate = schema.Choice(
-        title=_(u'VAT rate'),
-        vocabulary=u'collective.behavior.vat.rates')
+class IVAT(VATSchema):
+    """Interface for behavior: VAT"""
 
 
 class IAdapter(Interface):
