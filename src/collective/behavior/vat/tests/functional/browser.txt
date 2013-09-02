@@ -9,7 +9,7 @@ Add Test Folder::
     >>> browser.getControl(name="form.buttons.save").click()
     >>> print browser.bycss('#form-widgets-IVAT-rate')
     --- 1 ---
-    <span id="form-widgets-IVAT-rate" class="select-widget required choice-field"><span class="selected-option">24%</span></span>
+    <span id="form-widgets-IVAT-rate" class="select-widget choice-field"><span class="selected-option">24%</span></span>
 
 Add Test Folder to Folder1::
 
@@ -18,4 +18,4 @@ Add Test Folder to Folder1::
     >>> browser.getControl(name="form.buttons.save").click()
     >>> print browser.bycss('#form-widgets-IVAT-rate')
     --- 1 ---
-    <span id="form-widgets-IVAT-rate" class="select-widget required choice-field"><span class="selected-option">24%</span></span>
+    <span id="form-widgets-IVAT-rate" class="select-widget choice-field"><span class="selected-option">24%</span></span>

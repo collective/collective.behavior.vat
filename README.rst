@@ -7,7 +7,7 @@ collective.behavior.vat provides VAT related behavior to dexterity content types
 Currently tested with
 ---------------------
 
-* Plone-4.3 and Python-2.7.x [taito]
+* Plone-4.3.1 and Python-2.7.x [taito]
 
 Behavior
 --------
